@@ -1,0 +1,80 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.16"
+        classpath "net.serenity-bdd:serenity-single-page-report:4.0.16"
+    }
+}
+
+plugins {
+    id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.16"
+    id 'java'
+    id 'idea'
+    id "org.sonarqube" version "4.0.0.2929"
+}
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+ext {
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '4.0.16'
+    serenityCucumberVersion = '4.0.16'
+    junitVersion = '5.9.2'
+    assertJVersion = '3.8.0'
+    logbackVersion = '1.4.6'
+    lombokVersion = '1.18.26'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+            "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}",
+            "org.projectlombok:lombok:${lombokVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}",
+
+            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+
+            'com.fasterxml.jackson.core:jackson-databind:2.15.0',
+            'org.apache.commons:commons-text:1.10.0',
+            'org.apache.logging.log4j:log4j-core:2.20.0',
+            'jakarta.persistence:jakarta.persistence-api:3.1.0',
+            'io.rest-assured:json-schema-validator:4.5.1'
+
+
+
+    testImplementation 'org.junit.platform:junit-platform-suite:1.9.2'
+
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    testCompileOnly 'junit:junit:4.13.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.4.0'
+    testRuntimeOnly 'io.cucumber:cucumber-junit-platform-engine:7.11.2'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)

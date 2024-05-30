@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Signup API Tests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-05-30T18:41:10" hostname="PSOFKA01198" time="11.613">
+  <properties/>
+  <testcase name="Create a new user in signup" classname="Signup API Tests" time="9.55"/>
+  <testcase name="Attempt to create an existing user" classname="Signup API Tests" time="2.063"/>
+  <system-out><![CDATA[
+@HP
+Scenario Outline: Create a new user in signup         ?[90m# src/test/resources/features/signup.feature:17?[0m
+13:41:10.928 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/julio.betancur/Documents/Proyectos_Prueba/demoblazeapi/src/test/resources/features/signup.feature
+13:41:11.282 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create a new user in signup(signup-api-tests;create-a-new-user-in-signup)
+--------------------------------------------------------------------------------
+13:41:13.039 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:13.273 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
+13:41:19.803 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:41:19.833 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mWhen ?[0m?[32mI send the user details?[0m                        ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iSendTheUserDetails(demoblaze.model.datatables.SignupDataTable)?[0m
+    | username | password    |
+    | newuser  | password123 |
+13:41:19.883 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:20.224 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mThen ?[0m?[32mI validate the response content for the signup?[0m ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iValidateTheResponseContentForTheSignup(demoblaze.model.datatables.SignupDataTable)?[0m
+    | codeResponse | error |
+    | 200          | NA    |
+13:41:20.275 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create a new user in signup
+----------------------------------------------------------------------
+
+@Error
+Scenario Outline: Attempt to create an existing user  ?[90m# src/test/resources/features/signup.feature:30?[0m
+13:41:20.311 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/julio.betancur/Documents/Proyectos_Prueba/demoblazeapi/src/test/resources/features/signup.feature
+13:41:20.316 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Attempt to create an existing user(signup-api-tests;attempt-to-create-an-existing-user)
+--------------------------------------------------------------------------------
+13:41:20.398 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:20.427 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
+13:41:20.758 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:41:20.777 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mWhen ?[0m?[32mI send the user details?[0m                        ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iSendTheUserDetails(demoblaze.model.datatables.SignupDataTable)?[0m
+    | username    | password    |
+    | juliotester | password123 |
+13:41:20.807 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:22.293 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mThen ?[0m?[32mI validate the response content for the signup?[0m ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iValidateTheResponseContentForTheSignup(demoblaze.model.datatables.SignupDataTable)?[0m
+    | codeResponse | error                    |
+    | 200          | This user already exist. |
+13:41:22.334 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Attempt to create an existing user
+----------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

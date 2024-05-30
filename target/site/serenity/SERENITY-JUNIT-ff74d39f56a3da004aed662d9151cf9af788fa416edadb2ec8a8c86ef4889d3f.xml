@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login API Tests" skipped="0" tests="3" time="8.87" timestamp="2024-05-30 11:37:48"><testcase name="Correct username and password in login"/><testcase name="Incorrect username or password in login"/></testsuite>

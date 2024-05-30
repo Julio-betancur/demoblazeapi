@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Signup API Tests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Signup API Tests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Signup API Tests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">11.613s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Attempt to create an existing user</td>
+<td class="success">2.063s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Create a new user in signup</td>
+<td class="success">9.550s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@HP
+Scenario Outline: Create a new user in signup         ?[90m# src/test/resources/features/signup.feature:17?[0m
+13:41:10.928 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/julio.betancur/Documents/Proyectos_Prueba/demoblazeapi/src/test/resources/features/signup.feature
+13:41:11.282 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Create a new user in signup(signup-api-tests;create-a-new-user-in-signup)
+--------------------------------------------------------------------------------
+13:41:13.039 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:13.273 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
+13:41:19.803 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:41:19.833 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mWhen ?[0m?[32mI send the user details?[0m                        ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iSendTheUserDetails(demoblaze.model.datatables.SignupDataTable)?[0m
+    | username | password    |
+    | newuser  | password123 |
+13:41:19.883 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:20.224 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mThen ?[0m?[32mI validate the response content for the signup?[0m ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iValidateTheResponseContentForTheSignup(demoblaze.model.datatables.SignupDataTable)?[0m
+    | codeResponse | error |
+    | 200          | NA    |
+13:41:20.275 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Create a new user in signup
+----------------------------------------------------------------------
+
+@Error
+Scenario Outline: Attempt to create an existing user  ?[90m# src/test/resources/features/signup.feature:30?[0m
+13:41:20.311 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/Users/julio.betancur/Documents/Proyectos_Prueba/demoblazeapi/src/test/resources/features/signup.feature
+13:41:20.316 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Attempt to create an existing user(signup-api-tests;attempt-to-create-an-existing-user)
+--------------------------------------------------------------------------------
+13:41:20.398 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:20.427 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
+13:41:20.758 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+13:41:20.777 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mWhen ?[0m?[32mI send the user details?[0m                        ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iSendTheUserDetails(demoblaze.model.datatables.SignupDataTable)?[0m
+    | username    | password    |
+    | juliotester | password123 |
+13:41:20.807 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+13:41:22.293 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+  ?[32mThen ?[0m?[32mI validate the response content for the signup?[0m ?[90m# demoblaze.stepdefinitions.SignupStepDefinition.iValidateTheResponseContentForTheSignup(demoblaze.model.datatables.SignupDataTable)?[0m
+    | codeResponse | error                    |
+    | 200          | This user already exist. |
+13:41:22.334 [Test worker] INFO  -- 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Attempt to create an existing user
+----------------------------------------------------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0</a> at 30/05/2024, 1:41:22 p. m.</p>
+</div>
+</div>
+</body>
+</html>

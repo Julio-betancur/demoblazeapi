@@ -1,0 +1,14 @@
+Se realizaron pruebas funcionales de los servicios REST proporcionados por la página https://www.demoblaze.com, específicamente para las funcionalidades de registro (signup) y autenticación (login). Las pruebas se centraron en verificar las respuestas de la API para diferentes escenarios de uso.
+
+Importancia de Probar Servicios Automatizados:
+La automatización de pruebas de servicios REST es crucial para garantizar la fiabilidad y consistencia de las funcionalidades clave de una aplicación. Realizar estas pruebas de manera automatizada permite:
+
+Eficiencia y Ahorro de Tiempo: La ejecución de pruebas automatizadas es significativamente más rápida que las pruebas manuales, lo cual acelera el ciclo de desarrollo y permite detectar y corregir problemas en etapas tempranas.
+Repetibilidad y Consistencia: Las pruebas automatizadas aseguran que los casos de prueba se ejecuten de la misma manera en cada ciclo, eliminando la variabilidad que puede introducirse con pruebas manuales.
+Cobertura Extensiva: Permite una cobertura más amplia de casos de prueba, incluyendo escenarios negativos y de borde, que podrían ser tediosos de realizar manualmente.
+Documentación y Trazabilidad: Las herramientas de automatización generan reportes detallados de los resultados, facilitando la documentación y el seguimiento de los hallazgos.
+Resultados:
+
+Las pruebas se ejecutaron con éxito, validando la correcta funcionalidad de los servicios de registro y autenticación.
+No se encontraron bugs ni comportamientos inesperados durante la ejecución de las pruebas.
+Las respuestas de la API fueron consistentes y adecuadas para los casos de prueba considerados.
